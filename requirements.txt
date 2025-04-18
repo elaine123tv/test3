@@ -10,3 +10,4 @@ openai
 contractions
 plotly
 lxml
+lxml[html_clean]
