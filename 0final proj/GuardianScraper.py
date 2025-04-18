@@ -1,7 +1,7 @@
 import re
 from bs4 import BeautifulSoup
 import requests
-import newspaper
+
 
 def getTopHeadlines(api_key, section):
     results = []

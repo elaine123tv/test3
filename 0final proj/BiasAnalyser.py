@@ -1,7 +1,6 @@
 import json
 import re
 import os
-import newspaper
 from openai import OpenAI
 from textblob import TextBlob
 import BBCNewsScraper
@@ -10,7 +9,6 @@ import MirrorScraper
 import SkyNewsScraper
 import TheSunScraper
 import string
-import nltk
 import contractions
 import pandas as pd
 
@@ -18,7 +16,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
-import time
+
 
 
 def clean(articleData, includeQuotes):

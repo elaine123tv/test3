@@ -35,8 +35,8 @@ def getHeadlines():
                 genre,
                 "The Guardian",
                 executor.submit(
+                    GuardianScraper.getTopHeadlines, 
                     os.getenv("GUARDIAN_KEY"), 
-                    '18daef39-58e5-4824-a400-51efa5799e43', 
                     links[1]
                 )
             ))
