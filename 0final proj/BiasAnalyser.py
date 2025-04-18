@@ -126,7 +126,7 @@ def gptAnalysis(articleData):
     else:
         subTitle = ""
     
-    with open('llmBiasDetectorPrompt.txt', 'r') as file:
+    with open('0final proj/llmBiasDetectorPrompt.txt', 'r') as file:
             promptTemplate = file.read()
 
     prompt = promptTemplate.format(insertTitle = articleData['title'],insertSubTitle=subTitle, insertContent=articleData['content'], insertCaptions=captions)
