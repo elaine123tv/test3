@@ -9,3 +9,4 @@ textblob
 openai
 contractions
 plotly
+lxml
