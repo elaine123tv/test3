@@ -84,9 +84,13 @@ def filterHeadlines(genres, outlets):
 
 def setUpTopHeadlinesPage():
     # Initialize session state variables if they don't exist
-
-    if "headlines" not in st.session_state:
+    now = datetime.now()
+    if "headlines" not in st.session_state or "last_refresh" not in st.session_state:
         st.session_state.headlines = getHeadlines()
+        st.session_state.last_refresh = now
+    elif now - st.session_state.last_refresh > timedelta(minutes=30):
+        st.session_state.headlines = getHeadlines()
+        st.session_state.last_refresh = now
     
     if "selected_genres" not in st.session_state:
         st.session_state.selected_genres = ["Home"]
@@ -199,6 +203,7 @@ def displayHeadlines(headlines):
                 
                 st.divider()
         #showing_placeholder.info(f"Showing {noOfArticles} articles...")
+
 
 
 
