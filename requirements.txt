@@ -11,3 +11,4 @@ contractions
 plotly
 lxml
 lxml[html_clean]
+pyperclip
