@@ -136,7 +136,7 @@ def gptAnalysis(articleData):
     response = client.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are a news bias and sentiment detector."},
+            {"role": "system", "content": "You are an unbiased detector for news bias and sentiment."},
             {"role": "user", "content": prompt},
         ]
     )
