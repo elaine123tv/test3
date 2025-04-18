@@ -197,9 +197,8 @@ def displayHeadlines(headlines):
                 col1, col2 = st.columns([1, 1])
 
                 with col1:
-                    # Copy URL button
                     if st.button("📋 Copy URL", key=f"copy{outlet}_{genre}_{index}"):
-                        pass  # Add pyperclip.copy(article['url'])
+                        pyperclip.copy(article['url'])
                     
                 
                 st.divider()
